@@ -1,0 +1,9 @@
+(
+  name: "LaunchControl",
+  summary: "Interface for the Novation LaunchControl MIDI Controller",
+  version: "0.0.0",
+  schelp: "LaunchControl",
+  dependencies: [],
+  license: "MIT",
+  copyright: "Spencer Russell 2017"
+)
