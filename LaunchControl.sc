@@ -110,6 +110,8 @@ LaunchControl {
 		this.currentPage.onDirection = callback;
 	}
 
+	knobValues { ^this.currentPage.knobValues }
+
 	handlePad { | idx, val |
 		val = val/127;
 		if(this.currentPage.onPad.notNil, {
@@ -122,6 +124,7 @@ LaunchControl {
 
 	handleKnob { | idx, val |
 		val = val/127;
+		this.currentPage.knobValues[idx] = val;
 		if(this.currentPage.onKnob.notNil, {
 			this.currentPage.onKnob.value(idx, val);
 		});
